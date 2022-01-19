@@ -24,8 +24,10 @@ const student = {
 const resultElement = document.getElementById('result');
 
 for (let key in student) {
-    console.log(key);
+    console.log(student[key]);
+    resultElement.innerText += ` ${key}: ${student[key]} `
 }
+
 
 //! Creare un array di oggetti di studenti (ossìa oggetti con le proprietà sopra descritte).
 
@@ -39,18 +41,21 @@ const studentsList = [
 
 for (let j = 0; j < studentsList.length; j++) {
     const currentStudent = studentsList[j];
+    // resultElement.innerText += currentStudent.nome;
     console.log(currentStudent.nome);
     console.log(currentStudent.cognome);
+    // resultElement.innerText += currentStudent.cognome;
 }
 
 //! Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere all’array creato in precedenza, un nuovo oggetto studente inserendo nell’ ordine: nome, cognome e età.
 
 
 //! BONUS
+
 //connessione con gli elementi del DOM
-const name = document.getElementById('name').value;
-const lastname = document.getElementById('lastname').value;
-const age = document.getElementById('age').value;
+const name = document.getElementById('name');
+const lastname = document.getElementById('lastname');
+const age = document.getElementById('age');
 const button = document.getElementById('button');
 
 const newStudentName = name.value;
@@ -58,21 +63,27 @@ const newStudentLastName = lastname.value;
 const newStudentAge = age.value;
 
 
-const newStudent = [
-    { nome: newStudentName, cognome: newStudentLastName, eta: newStudentAge }
-]
+const newStudent = { nome: newStudentName, cognome: newStudentLastName, eta: newStudentAge }
+
 
 button.addEventListener('click', function () {
     studentsList.push(newStudent);
+    resultElement.innerText = studentsList;
     console.log(studentsList);
 })
 
 
-
+//!VERSIONE NORMALE
 /*
 const newStudentName = prompt('Inserisci il nome dello studente');
 const newStudentLastName = prompt('Inserisci il cognome dello studente');
 const newStudentAge = prompt('Inserisci età dello studente');
+
+const newStudent = { nome: newStudentName, cognome: newStudentLastName, eta: newStudentAge }
+
+
+studentsList.push(newStudent);
+console.log(studentsList);
 */
 
 
