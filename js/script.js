@@ -11,7 +11,7 @@ BONUS:
 Usiamo il DOM per stampare e chiedere le informazioni all'utente!
 */
 
-// Creare un oggetto che descriva uno studente, con le seguenti proprietà: nome, cognome e età.
+//! Creare un oggetto che descriva uno studente, con le seguenti proprietà: nome, cognome e età.
 const student = {
     nome: 'Nicolas',
     cognome: 'Maranzano',
@@ -20,21 +20,23 @@ const student = {
 
 console.log(student);
 
-// Stampare a schermo attraverso un ciclo for-in tutte le proprietà dell'oggetto.
+//! Stampare a schermo attraverso un ciclo for-in tutte le proprietà dell'oggetto.
 
-//! Connetto l'oggetto del DOM con JS
+// Connetto l'oggetto del DOM con JS
 const resultElement = document.getElementById('result');
 
 for (let key in student) {
     console.log(key);
 }
 
-// Creare un array di oggetti di studenti (ossìa oggetti con le proprietà sopra descritte).
+//! Creare un array di oggetti di studenti (ossìa oggetti con le proprietà sopra descritte).
 
 const studentsList = [
     { nome: 'Pippo', cognome: 'Franco', eta: 80 },
     { nome: 'John', cognome: 'Wick', eta: 40 },
     { nome: 'Daenerys', cognome: 'Targarien', eta: 23 }
 ]
+
+//! Ciclare su tutti gli studenti e stampare per ognuno di essi: nome e cognome.
 
 
