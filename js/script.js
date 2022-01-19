@@ -18,8 +18,6 @@ const student = {
     eta: 32,
 }
 
-console.log(student);
-
 //! Stampare a schermo attraverso un ciclo for-in tutte le proprietà dell'oggetto.
 
 // Connetto l'oggetto del DOM con JS
@@ -44,5 +42,37 @@ for (let j = 0; j < studentsList.length; j++) {
     console.log(currentStudent.nome);
     console.log(currentStudent.cognome);
 }
+
+//! Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere all’array creato in precedenza, un nuovo oggetto studente inserendo nell’ ordine: nome, cognome e età.
+
+
+//! BONUS
+//connessione con gli elementi del DOM
+const name = document.getElementById('name').value;
+const lastname = document.getElementById('lastname').value;
+const age = document.getElementById('age').value;
+const button = document.getElementById('button');
+
+const newStudentName = name.value;
+const newStudentLastName = lastname.value;
+const newStudentAge = age.value;
+
+
+const newStudent = [
+    { nome: newStudentName, cognome: newStudentLastName, eta: newStudentAge }
+]
+
+button.addEventListener('click', function () {
+    studentsList.push(newStudent);
+    console.log(studentsList);
+})
+
+
+
+/*
+const newStudentName = prompt('Inserisci il nome dello studente');
+const newStudentLastName = prompt('Inserisci il cognome dello studente');
+const newStudentAge = prompt('Inserisci età dello studente');
+*/
 
 
