@@ -34,9 +34,15 @@ for (let key in student) {
 const studentsList = [
     { nome: 'Pippo', cognome: 'Franco', eta: 80 },
     { nome: 'John', cognome: 'Wick', eta: 40 },
-    { nome: 'Daenerys', cognome: 'Targarien', eta: 23 }
+    { nome: 'Daenerys', cognome: 'Targaryen', eta: 23 }
 ]
 
 //! Ciclare su tutti gli studenti e stampare per ognuno di essi: nome e cognome.
+
+for (let j = 0; j < studentsList.length; j++) {
+    const currentStudent = studentsList[j];
+    console.log(currentStudent.nome);
+    console.log(currentStudent.cognome);
+}
 
 
