@@ -24,3 +24,17 @@ console.log(student);
 
 //! Connetto l'oggetto del DOM con JS
 const resultElement = document.getElementById('result');
+
+for (let key in student) {
+    console.log(key);
+}
+
+// Creare un array di oggetti di studenti (ossìa oggetti con le proprietà sopra descritte).
+
+const studentsList = [
+    { nome: 'Pippo', cognome: 'Franco', eta: 80 },
+    { nome: 'John', cognome: 'Wick', eta: 40 },
+    { nome: 'Daenerys', cognome: 'Targarien', eta: 23 }
+]
+
+
