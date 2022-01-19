@@ -18,8 +18,6 @@ const student = {
     eta: 32,
 }
 
-//! Stampare a schermo attraverso un ciclo for-in tutte le proprietà dell'oggetto.
-
 // Connetto l'oggetto del DOM con JS
 const resultElement = document.getElementById('result');
 const resultArrayElement = document.getElementById('result-array');
@@ -29,12 +27,20 @@ const lastname = document.getElementById('lastname');
 const age = document.getElementById('age');
 const button = document.getElementById('button');
 
-const newStudentName = name.value;
-const newStudentLastName = lastname.value;
-const newStudentAge = age.value;
+// const newStudentName = name.value;
+// const newStudentLastName = lastname.value;
+// const newStudentAge = age.value;
+
+//!VERSIONE NORMALE
+
+const newStudentName = prompt('Inserisci il nome dello studente');
+const newStudentLastName = prompt('Inserisci il cognome dello studente');
+const newStudentAge = prompt('Inserisci età dello studente');
 
 
-const newStudent = { nome: newStudentName, cognome: newStudentLastName, eta: newStudentAge }
+const newStudent = { nome: newStudentName, cognome: newStudentLastName, eta: newStudentAge };
+
+//! Stampare a schermo attraverso un ciclo for-in tutte le proprietà dell'oggetto.
 
 for (let key in student) {
     console.log(student[key]);
@@ -50,6 +56,9 @@ const studentsList = [
     { nome: 'Daenerys', cognome: 'Targaryen', eta: 23 }
 ]
 
+studentsList.push(newStudent);
+console.log(studentsList);
+
 //! Ciclare su tutti gli studenti e stampare per ognuno di essi: nome e cognome.
 
 for (let j = 0; j < studentsList.length; j++) {
@@ -61,30 +70,16 @@ for (let j = 0; j < studentsList.length; j++) {
 
 
 //! BONUS
-
-//connessione con gli elementi del DOM
-
-
+/*
 button.addEventListener('click', function () {
     studentsList.push(newStudent);
+    console.log(studentsList);
     for (let j = 0; j < studentsList.length; j++) {
         const now = studentsList[j];
         resultUserElement.innerHTML += `Nome: ${now['nome']} <br> Cognome: ${now['cognome']}<br> Eta': ${now['eta']}<br>`;
     }
 })
-
-
-//!VERSIONE NORMALE
-/*
-const newStudentName = prompt('Inserisci il nome dello studente');
-const newStudentLastName = prompt('Inserisci il cognome dello studente');
-const newStudentAge = prompt('Inserisci età dello studente');
-
-const newStudent = { nome: newStudentName, cognome: newStudentLastName, eta: newStudentAge }
-
-
-studentsList.push(newStudent);
-console.log(studentsList);
 */
+
 
 
