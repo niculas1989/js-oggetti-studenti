@@ -10,3 +10,12 @@ Descrizione:
 BONUS:
 Usiamo il DOM per stampare e chiedere le informazioni all'utente!
 */
+
+// Creare un oggetto che descriva uno studente, con le seguenti proprietà: nome, cognome e età.
+const student = {
+    nome: 'Nicolas',
+    cognome: 'Maranzano',
+    eta: 32,
+}
+
+console.log(student);
