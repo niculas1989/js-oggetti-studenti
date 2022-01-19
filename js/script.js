@@ -22,6 +22,8 @@ const student = {
 
 // Connetto l'oggetto del DOM con JS
 const resultElement = document.getElementById('result');
+const resultArrayElement = document.getElementById('result-array');
+const resultUserElement = document.getElementById('result-user');
 
 for (let key in student) {
     console.log(student[key]);
@@ -41,10 +43,7 @@ const studentsList = [
 
 for (let j = 0; j < studentsList.length; j++) {
     const currentStudent = studentsList[j];
-    // resultElement.innerText += currentStudent.nome;
-    console.log(currentStudent.nome);
-    console.log(currentStudent.cognome);
-    // resultElement.innerText += currentStudent.cognome;
+    resultArrayElement.innerHTML += `Nome: ${currentStudent.nome} <br> Cognome: ${currentStudent.cognome}<br>`;
 }
 
 //! Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere all’array creato in precedenza, un nuovo oggetto studente inserendo nell’ ordine: nome, cognome e età.
