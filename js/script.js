@@ -19,3 +19,8 @@ const student = {
 }
 
 console.log(student);
+
+// Stampare a schermo attraverso un ciclo for-in tutte le proprietà dell'oggetto.
+
+//! Connetto l'oggetto del DOM con JS
+const resultElement = document.getElementById('result');
