@@ -24,10 +24,21 @@ const student = {
 const resultElement = document.getElementById('result');
 const resultArrayElement = document.getElementById('result-array');
 const resultUserElement = document.getElementById('result-user');
+const name = document.getElementById('name');
+const lastname = document.getElementById('lastname');
+const age = document.getElementById('age');
+const button = document.getElementById('button');
+
+const newStudentName = name.value;
+const newStudentLastName = lastname.value;
+const newStudentAge = age.value;
+
+
+const newStudent = { nome: newStudentName, cognome: newStudentLastName, eta: newStudentAge }
 
 for (let key in student) {
     console.log(student[key]);
-    resultElement.innerText += ` ${key}: ${student[key]} `
+    resultElement.innerHTML += ` ${key}: ${student[key]} <br> `
 }
 
 
@@ -52,23 +63,14 @@ for (let j = 0; j < studentsList.length; j++) {
 //! BONUS
 
 //connessione con gli elementi del DOM
-const name = document.getElementById('name');
-const lastname = document.getElementById('lastname');
-const age = document.getElementById('age');
-const button = document.getElementById('button');
-
-const newStudentName = name.value;
-const newStudentLastName = lastname.value;
-const newStudentAge = age.value;
-
-
-const newStudent = { nome: newStudentName, cognome: newStudentLastName, eta: newStudentAge }
 
 
 button.addEventListener('click', function () {
     studentsList.push(newStudent);
-    resultElement.innerText = studentsList;
-    console.log(studentsList);
+    for (let j = 0; j < studentsList.length; j++) {
+        const now = studentsList[j];
+        resultUserElement.innerHTML += `Nome: ${now['nome']} <br> Cognome: ${now['cognome']}<br> Eta': ${now['eta']}<br>`;
+    }
 })
 
 

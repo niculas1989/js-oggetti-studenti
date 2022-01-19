@@ -18,31 +18,30 @@
     </header>
 
     <main>
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="inputGroup-sizing-default">Nome</span>
-            <input id="name" type="text" class="form-control" aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-default">
-        </div>
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="inputGroup-sizing-default">Cognome</span>
-            <input id="lastname" type="text" class="form-control" aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-default">
-        </div>
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="inputGroup-sizing-default">Eta'</span>
-            <input id="age" type="text" class="form-control" aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-default">
-        </div>
+        <label for="name">Inserisci il nome:</label>
+        <input id="name" type="text">
+        <label for="lastname">Inserisci il cognome:</label>
+        <input id="lastname" type="text">
+        <label for="age">Inserisci l'età:</label>
+        <input id="age" type="text">
 
         <div class="d-flex justify-content-center">
             <button id="button">INVIA IL FORM</button>
         </div>
 
 
-
-        <div id="result"></div>
-        <div id="result-array"></div>
-        <div id="result-user"></div>
+        <div class="my-3">
+            <div class="text-danger"><strong>Tipologia studente:</strong></div>
+            <div id="result"></div>
+        </div>
+        <div class="my-3">
+            <div class="text-danger"><strong>Tipologia di classe:</strong></div>
+            <div id="result-array"></div>
+        </div>
+        <div class="my-3">
+            <div class="text-danger"><strong>Nuovo studente inserito dall'utente:</strong></div>
+            <div id="result-user"></div>
+        </div>
     </main>
 
 
