@@ -44,10 +44,43 @@ const age = document.getElementById('age');
 const button = document.getElementById('button');
 
 
+//! Creare un oggetto che descriva uno studente, con le seguenti proprietà: nome, cognome e età.
+const student = {
+    nome: 'Nicolas',
+    cognome: 'Maranzano',
+    eta: 32,
+}
+
+for (let key in student) {
+    resultElement.innerHTML += ` ${key}: ${student[key]} <br> `
+}
+
+
+//! Creare un array di oggetti di studenti (ossìa oggetti con le proprietà sopra descritte).
+
+const studentsList = [
+    { nome: 'Pippo', cognome: 'Franco', eta: 80 },
+    { nome: 'John', cognome: 'Wick', eta: 40 },
+    { nome: 'Daenerys', cognome: 'Targaryen', eta: 23 }
+]
+
+//! Ciclare su tutti gli studenti e stampare per ognuno di essi: nome e cognome.
+
+for (let j = 0; j < studentsList.length; j++) {
+    const currentStudent = studentsList[j];
+    resultArrayElement.innerHTML += `Nome: ${currentStudent.nome} <br> Cognome: ${currentStudent.cognome}<br>`;
+}
+
+
+
+
+
+
+/*
 getWordFromUser('Inserisci un nome');
 getWordFromUser('Inserisci un cognome');
 getNumberFromuser('Inserisci un numero');
-
+*/
 
 
 
