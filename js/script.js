@@ -11,6 +11,37 @@ BONUS:
 Usiamo il DOM per stampare e chiedere le informazioni all'utente!
 */
 
+// * Creo delle validazioni per far sì che l'utente (tramite il prompt) mi dia valori validi
+
+
+const getWordFromUser = (text) => {
+    let word;
+    do {
+        word = prompt(text).trim();
+    } while (!word);
+
+    return word;
+}
+
+const getNumberFromuser = (text) => {
+    let number;
+    do {
+        number = parseInt(prompt(text).trim());
+    } while (isNaN(number) || number < 0);
+
+    return number;
+}
+
+
+
+
+
+
+
+
+
+
+/*
 //! Creare un oggetto che descriva uno studente, con le seguenti proprietà: nome, cognome e età.
 const student = {
     nome: 'Nicolas',
@@ -56,6 +87,7 @@ const studentsList = [
     { nome: 'Daenerys', cognome: 'Targaryen', eta: 23 }
 ]
 
+//| Inserire nell'array esistente il nuovo, creato dal "push"
 studentsList.push(newStudent);
 console.log(studentsList);
 
@@ -70,7 +102,7 @@ for (let j = 0; j < studentsList.length; j++) {
 
 
 //! BONUS
-/*
+
 button.addEventListener('click', function () {
     studentsList.push(newStudent);
     console.log(studentsList);
