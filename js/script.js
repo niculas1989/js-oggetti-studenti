@@ -34,6 +34,14 @@ const getNumberFromuser = (text) => {
 
 
 
+//! Connetto l'oggetto del DOM con JS
+const resultElement = document.getElementById('result');
+const resultArrayElement = document.getElementById('result-array');
+const resultUserElement = document.getElementById('result-user');
+const name = document.getElementById('name');
+const lastname = document.getElementById('lastname');
+const age = document.getElementById('age');
+const button = document.getElementById('button');
 
 
 
