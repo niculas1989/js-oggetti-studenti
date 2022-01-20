@@ -18,7 +18,7 @@ const getWordFromUser = (text) => {
     let word;
     do {
         word = prompt(text).trim();
-    } while (!word);
+    } while (!word || !isNaN(word));
 
     return word;
 }
@@ -42,6 +42,12 @@ const name = document.getElementById('name');
 const lastname = document.getElementById('lastname');
 const age = document.getElementById('age');
 const button = document.getElementById('button');
+
+
+getWordFromUser('Inserisci un nome');
+getWordFromUser('Inserisci un cognome');
+getNumberFromuser('Inserisci un numero');
+
 
 
 
