@@ -64,6 +64,8 @@ const studentsList = [
     { nome: 'Daenerys', cognome: 'Targaryen', eta: 23 }
 ]
 
+console.table(studentsList);
+
 //! Ciclare su tutti gli studenti e stampare per ognuno di essi: nome e cognome.
 
 for (let j = 0; j < studentsList.length; j++) {
@@ -71,16 +73,22 @@ for (let j = 0; j < studentsList.length; j++) {
     resultArrayElement.innerHTML += `Nome: ${currentStudent.nome} <br> Cognome: ${currentStudent.cognome}<br>`;
 }
 
+//! Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere all’array creato in precedenza, un nuovo oggetto studente inserendo nell’ ordine: nome, cognome e età.
+
+const newName = getWordFromUser('Inserisci un nome');
+const newSurname = getWordFromUser('Inserisci un cognome');
+const newAge = getNumberFromuser('Inserisci un numero');
+
+const newStudent = { nome: newName, cognome: newSurname, eta: newAge };
+
+resultUserElement.innerHTML = `nome: ${newName} <br> cognome: ${newSurname} <br> eta: ${newAge}`
+
+studentsList.push(newStudent);
+
+console.table(studentsList);
 
 
 
-
-
-/*
-getWordFromUser('Inserisci un nome');
-getWordFromUser('Inserisci un cognome');
-getNumberFromuser('Inserisci un numero');
-*/
 
 
 
